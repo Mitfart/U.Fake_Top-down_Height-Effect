@@ -51,6 +51,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   body: {fileID: 3040926081877472633}
+  shadowSprite: {fileID: 0}
+  offset: {x: 0, y: 0}
+  scale: {x: 1, y: 1}
+  freezeRotation: 0
+  shadow: {fileID: 0}
+  shadowRender: {fileID: 0}
 --- !u!114 &-2284400272693168835
 MonoBehaviour:
   m_ObjectHideFlags: 0

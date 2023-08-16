@@ -17,7 +17,7 @@ namespace Code {
 
       private void InitVariables() => _dividedDisappearHeight = 1f / disappearHeight;
 
-      private void SetShadowScale() => dropShadow.Shadow.transform.localScale = Vector3.one * Mathf.Max(minScale, CalcScale());
+      private void SetShadowScale() => dropShadow.scale = Vector3.one * Mathf.Max(minScale, CalcScale());
 
       private float CalcScale() => 1f - Mathf.Clamp01(fakeHeight.Height * _dividedDisappearHeight);
    }
