@@ -18,7 +18,7 @@ namespace Code {
 
 
       private void Update() {
-         gun.Rotate2D(at: Mouse());
+         gun.Rotate2D(at: AimPoint());
 
          if (MainShootInput())
             gun.Shoot(
@@ -39,10 +39,10 @@ namespace Code {
             );
       }
 
-
-
+      private        Vector3 AimPoint()         => Mouse() + Height();
+      private        Vector3 Height()           => Vector3.up * FakeHeight.Height;
+      private        Vector3 Mouse()            => mainCamera.ScreenToWorldPoint(Input.mousePosition);
       private static bool    MainShootInput()   => Input.GetMouseButtonDown(0);
       private static bool    SecondShootInput() => Input.GetMouseButtonDown(1);
-      private        Vector3 Mouse()            => mainCamera.ScreenToWorldPoint(Input.mousePosition);
    }
 }
